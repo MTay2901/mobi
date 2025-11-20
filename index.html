@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobi | El nuevo estándar inmobiliario</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de Colores -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mobi: {
+                            orange: '#ff5500',
+                            cream: '#f5f4f2',
+                            white: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f5f4f2; }
+        .smooth-scroll { scroll-behavior: smooth; }
+        .fade-enter { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="text-slate-900 antialiased smooth-scroll">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-mobi-white/90 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <img src="logo.png" alt="mobi logo" class="h-12 w-auto object-contain"> 
+                    <span class="font-bold text-2xl tracking-tight text-slate-900 hidden">mobi</span>
+                </div>
+                <a href="https://wa.link/b7xiu1" target="_blank" class="hidden md:inline-block bg-mobi-orange text-white px-6 py-2.5 rounded-full text-sm font-bold hover:opacity-90 transition duration-300 shadow-lg shadow-orange-500/20">
+                    Solicitar Demo
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-mobi-cream">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-white border border-stone-200 text-mobi-orange text-xs font-bold uppercase tracking-wider mb-6">
+                Powered by QUARZ & PARAGON
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-tight">
+                No vendas m². <br>
+                Vende el <span class="text-mobi-orange">Sueño.</span>
+            </h1>
+            <p class="text-xl text-stone-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Transformamos espacios vacíos en hogares personalizados en tiempo real. 
+                Una solución impulsada por IA para que tus clientes diseñen su vida antes de firmar.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button onclick="openDemoModal()" class="bg-mobi-orange text-white px-8 py-4 rounded-full font-bold hover:opacity-90 transition shadow-xl shadow-orange-500/30">
+                    Ver la magia en acción
+                </button>
+                <a href="#evolucion" class="bg-white text-stone-600 border border-stone-200 px-8 py-4 rounded-full font-bold hover:bg-stone-50 transition">
+                    Ver la evolución
+                </a>
+            </div>
+
+            <div class="mt-16 relative max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2000&auto=format&fit=crop" alt="Espacio mobi" class="w-full h-[500px] object-cover">
+                <div class="absolute bottom-8 left-8 bg-white/90 backdrop-blur px-6 py-3 rounded-xl shadow-lg">
+                    <p class="font-bold text-slate-800 flex items-center gap-2">
+                        <i class="fa-solid fa-couch text-mobi-orange"></i> Mobiliario NIHM
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVOLUCIÓN -->
+    <section id="evolucion" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="w-12 h-12 bg-stone-100 text-mobi-orange rounded-full flex items-center justify-center text-2xl mb-6">
+                    <i class="fa-solid fa-timeline"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">La historia nos enseña qué sigue.</h2>
+                <p class="text-stone-600 text-lg mb-6 leading-relaxed">
+                    Hubo un tiempo en que vender sin cocina era normal. Hoy es impensable. <br>
+                    La industria inmobiliaria siempre avanza hacia entregar el producto más completo.
+                </p>
+                <div class="border-l-4 border-mobi-orange pl-6 py-2 bg-mobi-cream rounded-r-lg">
+                    <p class="text-slate-800 font-semibold">
+                        Descubre por qué mobi es el siguiente paso obligatorio. <i class="fa-solid fa-arrow-right text-mobi-orange ml-2"></i>
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative bg-mobi-cream p-10 rounded-3xl min-h-[380px] flex flex-col justify-center shadow-inner border border-stone-200">
+                <!-- Slide 1 -->
+                <div id="slide-0" class="slide-content block fade-enter">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-4xl font-bold text-stone-300">1950</span>
+                        <div class="h-px flex-1 bg-stone-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-600 mb-3">El Espacio Vacío</h3>
+                    <p class="text-stone-600 mb-6 text-sm md:text-base">
+                        Los departamentos se vendían sin nada. Solo había un espacio designado para "instalar" la cocina.
+                        <br><strong>El problema:</strong> El cliente compraba un problema a resolver.
+                    </p>
+                </div>
+                <!-- Slide 2 -->
+                <div id="slide-1" class="slide-content hidden fade-enter">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-4xl font-bold text-stone-500">1990</span>
+                        <div class="h-px flex-1 bg-stone-500"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-700 mb-3">La Era del Equipamiento</h3>
+                    <p class="text-slate-600 mb-6 text-sm md:text-base">
+                        Empezó a ser común entregar muebles altos, bajos y hornos. La "cocina completa" se convirtió en estándar en Europa y EE.UU.
+                    </p>
+                </div>
+                <!-- Slide 3 -->
+                <div id="slide-2" class="slide-content hidden fade-enter">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-4xl font-bold text-slate-800">2000+</span>
+                        <div class="h-px flex-1 bg-slate-800"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">El Estándar Obligatorio</h3>
+                    <p class="text-slate-700 mb-6 text-sm md:text-base">
+                        En LatAm se vuelve <strong>imposible</strong> vender un proyecto nuevo sin cocina equipada. Las inmobiliarias que no lo hicieron, perdieron mercado.
+                    </p>
+                    <div class="text-white bg-slate-800 text-xs font-bold px-3 py-1 rounded uppercase inline-block">Norma de Mercado</div>
+                </div>
+                <!-- Slide 4 -->
+                <div id="slide-3" class="slide-content hidden fade-enter">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-5xl font-extrabold text-mobi-orange">HOY</span>
+                        <div class="h-1 flex-1 bg-mobi-orange rounded-full"></div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-3">El Próximo Estándar</h3>
+                    <p class="text-slate-700 mb-6 text-sm md:text-base">
+                        La historia se repite. El cliente ya no quiere un casco gris en la sala. 
+                        <strong>mobi</strong> permite entregar el departamento totalmente personalizado.
+                    </p>
+                    <div class="text-mobi-orange text-sm font-bold bg-white px-4 py-2 rounded-full inline-block shadow-sm border border-orange-100">
+                        <i class="fa-solid fa-check-double mr-2"></i> Sé el primero
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center mt-4 pt-6 border-t border-stone-300/50">
+                    <button onclick="changeSlide(-1)" class="text-stone-400 hover:text-mobi-orange transition text-2xl px-4 py-2"><i class="fa-solid fa-arrow-left"></i></button>
+                    <div class="flex gap-2">
+                        <div id="dot-0" class="w-2 h-2 rounded-full bg-mobi-orange transition-all"></div>
+                        <div id="dot-1" class="w-2 h-2 rounded-full bg-stone-300 transition-all"></div>
+                        <div id="dot-2" class="w-2 h-2 rounded-full bg-stone-300 transition-all"></div>
+                        <div id="dot-3" class="w-2 h-2 rounded-full bg-stone-300 transition-all"></div>
+                    </div>
+                    <button onclick="changeSlide(1)" class="text-stone-800 hover:text-mobi-orange transition text-2xl px-4 py-2"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO LOCAL (GITHUB) -->
+    <section id="video-demo" class="py-10 pb-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900">La evolución en acción</h2>
+                <p class="text-stone-500 mt-2">Mira cómo mobi transforma la experiencia de compra.</p>
+            </div>
+            
+            <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-mobi-cream bg-black aspect-video">
+                <video class="w-full h-full object-cover" controls playsinline>
+                    <source src="mobi-demo.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALIADO NIHM CON CATÁLOGO VISUAL -->
+    <section class="py-24 bg-white border-t border-stone-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                
+                <!-- Lado Izquierdo: Imagen Principal -->
+                <div class="relative sticky top-24">
+                    <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=1000&auto=format&fit=crop" class="rounded-3xl shadow-xl w-full object-cover h-[500px]" alt="Diseño NIHM">
+                    <div class="absolute -bottom-10 -right-6 w-1/2 rounded-2xl shadow-2xl border-4 border-white overflow-hidden hidden md:block">
+                         <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=500&auto=format&fit=crop" class="w-full object-cover" alt="Detalle NIHM">
+                    </div>
+                    <div class="absolute top-6 left-6 bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
+                        <span class="font-bold text-slate-900 tracking-widest text-xs">NIHM</span>
+                        <span class="text-stone-400 text-xs">|</span>
+                        <span class="text-mobi-orange text-xs font-bold">PARTNER OFICIAL</span>
+                    </div>
+                </div>
+
+                <!-- Lado Derecho: Texto y GRID DE CATÁLOGO -->
+                <div class="lg:pl-8 pt-10 lg:pt-0">
+                    <span class="text-mobi-orange font-bold uppercase tracking-wider text-xs mb-2 block">Respaldo Tangible</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                        No son solo renders. <br>
+                        Es <span class="text-mobi-orange">Diseño de Autor.</span>
+                    </h2>
+                    <p class="text-stone-600 mb-6 text-lg leading-relaxed">
+                        Nuestra tecnología se sustenta en la realidad. Alianza exclusiva con <strong>NIHM</strong>, firma líder en interiorismo.
+                    </p>
+
+                    <!-- GRID DE CATÁLOGO (ESTILO VISUAL) -->
+                    <div class="mb-8">
+                        <h4 class="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wide">Explora el Catálogo NIHM</h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                            
+                            <!-- SILLAS -->
+                            <a href="https://nihmdesign.com/c/sillas/" target="_blank" class="group relative h-48 overflow-hidden rounded-lg">
+                                <img src="H_SILLAS.webp" alt="Sillas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
+                                <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
+                                    <span class="font-bold tracking-widest text-sm">SILLAS</span>
+                                    <i class="fa-solid fa-arrow-right -rotate-45 text-xs opacity-80"></i>
+                                </div>
+                            </a>
+
+                            <!-- SOFAS -->
+                            <a href="https://nihmdesign.com/c/sofas/" target="_blank" class="group relative h-48 overflow-hidden rounded-lg">
+                                <img src="H_SOFA.webp" alt="Sofás" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
+                                <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
+                                    <span class="font-bold tracking-widest text-sm">SOFÁS</span>
+                                    <i class="fa-solid fa-arrow-right -rotate-45 text-xs opacity-80"></i>
+                                </div>
+                            </a>
+
+                            <!-- TERRAZAS -->
+                            <a href="https://nihmdesign.com/c/terraza/" target="_blank" class="group relative h-48 overflow-hidden rounded-lg">
+                                <img src="H_TERRAZAS.webp" alt="Terrazas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
+                                <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
+                                    <span class="font-bold tracking-widest text-sm">TERRAZAS</span>
+                                    <i class="fa-solid fa-arrow-right -rotate-45 text-xs opacity-80"></i>
+                                </div>
+                            </a>
+
+                            <!-- MESAS -->
+                            <a href="https://nihmdesign.com/c/mesas/" target="_blank" class="group relative h-48 overflow-hidden rounded-lg">
+                                <img src="H_MESAS.webp" alt="Mesas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
+                                <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
+                                    <span class="font-bold tracking-widest text-sm">MESAS</span>
+                                    <i class="fa-solid fa-arrow-right -rotate-45 text-xs opacity-80"></i>
+                                </div>
+                            </a>
+
+                            <!-- BUTACAS -->
+                            <a href="https://nihmdesign.com/c/butacas/" target="_blank" class="group relative h-48 overflow-hidden rounded-lg">
+                                <img src="H_BUTACAS.webp" alt="Butacas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
+                                <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
+                                    <span class="font-bold tracking-widest text-sm">BUTACAS</span>
+                                    <i class="fa-solid fa-arrow-right -rotate-45 text-xs opacity-80"></i>
+                                </div>
+                            </a>
+
+                            <!-- ALFOMBRAS -->
+                            <a href="https://nihmdesign.com/c/alfombras/" target="_blank" class="group relative h-48 overflow-hidden rounded-lg">
+                                <img src="H_ALFOMBRAS.webp" alt="Alfombras" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
+                                <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
+                                    <span class="font-bold tracking-widest text-sm">ALFOMBRAS</span>
+                                    <i class="fa-solid fa-arrow-right -rotate-45 text-xs opacity-80"></i>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-stone-100">
+                        <a href="https://nihmdesign.com" target="_blank" class="text-stone-400 hover:text-mobi-orange text-sm font-semibold transition flex items-center gap-2">
+                            Ver sitio web completo de NIHM <i class="fa-solid fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section id="como-funciona" class="py-24 bg-mobi-cream">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Simple para ti. Increíble para ellos.</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 border-b-4 border-transparent hover:border-mobi-orange">
+                    <div class="text-mobi-orange text-4xl mb-6"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3 class="text-xl font-bold mb-3">1. Captura</h3>
+                    <p class="text-stone-600">Tu agente toma una foto del casco gris o usa el render.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 border-b-4 border-transparent hover:border-mobi-orange relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-mobi-orange text-white text-xs px-3 py-1 rounded-bl-lg font-bold">IA POWERED</div>
+                    <div class="text-mobi-orange text-4xl mb-6"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 class="text-xl font-bold mb-3">2. Diseña</h3>
+                    <p class="text-stone-600">Nuestra IA amuebla el espacio en segundos con el catálogo real de <strong>NIHM</strong>.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 border-b-4 border-transparent hover:border-mobi-orange">
+                    <div class="text-mobi-orange text-4xl mb-6"><i class="fa-solid fa-key"></i></div>
+                    <h3 class="text-xl font-bold mb-3">3. Cierre</h3>
+                    <p class="text-stone-600">El cliente personaliza su futuro hogar. Tú cierras la venta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS (ENFOQUE: VISIÓN Y LIDERAZGO) -->
+    <section id="beneficios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                
+                <!-- Texto (Lado Izquierdo) -->
+                <div class="p-10 md:p-16 md:w-1/2 flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold text-white mb-6">La evolución no es opcional.</h2>
+                    <p class="text-stone-300 mb-8 text-lg">
+                        El mercado inmobiliario está cambiando y el cliente exige más. Seguir haciendo lo mismo que hace 10 años es quedarse atrás. 
+                        <strong>mobi</strong> es para las inmobiliarias que dictan el futuro, no para las que lo ven pasar.
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <!-- Punto 1 -->
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-mobi-orange/20 text-mobi-orange flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-gem"></i>
+                            </div>
+                            <div>
+                                <span class="text-white font-bold block">Valor sobre Precio</span>
+                                <span class="text-stone-400 text-sm">Sal de la competencia tradicional ofreciendo una experiencia inigualable que justifica tu valor.</span>
+                            </div>
+                        </li>
+                        <!-- Punto 2 -->
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-mobi-orange/20 text-mobi-orange flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-fingerprint"></i>
+                            </div>
+                            <div>
+                                <span class="text-white font-bold block">Ser Memorable</span>
+                                <span class="text-stone-400 text-sm">Haz que tu proyecto sea el único que el cliente recuerde realmente entre todas sus visitas.</span>
+                            </div>
+                        </li>
+                        <!-- Punto 3 -->
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-mobi-orange/20 text-mobi-orange flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <div>
+                                <span class="text-white font-bold block">Vanguardia Tecnológica</span>
+                                <span class="text-stone-400 text-sm">Adopta hoy la tecnología que mañana será el estándar. Sé el primero en innovar.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Imagen (Lado Derecho) -->
+                <div class="md:w-1/2 bg-stone-200 relative min-h-[300px]">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-90">
+                    <div class="absolute inset-0 bg-mobi-orange mix-blend-multiply opacity-30"></div>
+                    <div class="absolute bottom-10 left-10 right-10">
+                        <div class="bg-white/95 backdrop-blur p-6 rounded-2xl shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-mobi-orange rounded-full flex items-center justify-center text-white text-xl">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-stone-500 uppercase font-bold">Propuesta de Valor</p>
+                                    <p class="text-slate-900 font-bold text-lg">Liderazgo en el Sector</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-24 bg-mobi-orange text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">¿Listo para darle vida a tus espacios?</h2>
+            <p class="text-xl text-orange-100 mb-10 font-medium">Agenda una reunión ejecutiva de 15 minutos. <br> Sin compromiso, pura innovación.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.link/b7xiu1" target="_blank" class="bg-white text-mobi-orange text-lg px-8 py-4 rounded-full font-bold hover:bg-stone-100 transition shadow-lg w-full sm:w-auto inline-block">Agendar Demo</a>
+                <a href="https://wa.link/b7xiu1" target="_blank" class="bg-transparent border-2 border-white text-white text-lg px-8 py-4 rounded-full font-bold hover:bg-white/10 transition w-full sm:w-auto flex items-center justify-center gap-2 inline-block"><i class="fa-brands fa-whatsapp"></i> Hablemos</a>
+            </div>
+            <div class="mt-16 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-sm text-orange-100">
+                <div class="mb-4 md:mb-0 font-semibold flex items-center gap-2">
+                     <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center text-mobi-orange text-xs font-bold"><i class="fa-solid fa-home"></i></div>
+                     mobi © 2025
+                </div>
+                <div class="flex gap-6">
+                    <span>Alianza:</span>
+                    <span class="font-bold text-white">QUARZ</span>
+                    <span class="font-bold text-white">PARAGON</span>
+                    <span class="font-bold text-white">NIHM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL POP-UP -->
+    <div id="demoModal" class="fixed inset-0 z-[100] hidden flex-col items-center justify-center">
+        <div class="absolute inset-0 bg-slate-900/90 backdrop-blur-md transition-opacity" onclick="closeDemoModal()"></div>
+        <div class="relative w-full h-full md:w-[90vw] md:h-[90vh] bg-white md:rounded-2xl overflow-hidden shadow-2xl flex flex-col animate-fade-in-up">
+            <div class="bg-slate-900 text-white px-4 py-3 flex justify-between items-center flex-shrink-0">
+                <span class="font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-rocket text-mobi-orange"></i> mobi Live Demo</span>
+                <button onclick="closeDemoModal()" class="text-slate-400 hover:text-mobi-orange transition"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <iframe id="demoIframe" src="" class="w-full h-full border-0 bg-slate-50" allow="camera; microphone; fullscreen"></iframe>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 4; 
+        function changeSlide(direction) {
+            document.getElementById(`slide-${currentSlide}`).classList.add('hidden');
+            document.getElementById(`slide-${currentSlide}`).classList.remove('block');
+            document.getElementById(`dot-${currentSlide}`).classList.remove('bg-mobi-orange');
+            document.getElementById(`dot-${currentSlide}`).classList.add('bg-stone-300');
+            currentSlide = currentSlide + direction;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            document.getElementById(`slide-${currentSlide}`).classList.remove('hidden');
+            document.getElementById(`slide-${currentSlide}`).classList.add('block');
+            document.getElementById(`dot-${currentSlide}`).classList.remove('bg-stone-300');
+            document.getElementById(`dot-${currentSlide}`).classList.add('bg-mobi-orange');
+        }
+        const modal = document.getElementById('demoModal');
+        const iframe = document.getElementById('demoIframe');
+        const demoUrl = "https://mobi-design-ia-de-dise-o-de-interiores-38180566774.us-west1.run.app/";
+        function openDemoModal() { iframe.src = demoUrl; modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow = 'hidden'; }
+        function closeDemoModal() { modal.classList.add('hidden'); modal.classList.remove('flex'); iframe.src = ""; document.body.style.overflow = 'auto'; }
+    </script>
+</body>
+</html>
