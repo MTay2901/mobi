@@ -44,6 +44,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-3">
+                    <!-- Asegúrate de tener el archivo logo.png o cambia el src -->
                     <img src="logo.png" alt="mobi logo" class="h-12 w-auto object-contain"> 
                     <span class="font-bold text-2xl tracking-tight text-slate-900 hidden">mobi</span>
                 </div>
@@ -54,7 +55,7 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- 1. HERO SECTION (Portada) -->
     <section class="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-mobi-cream">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <span class="inline-block py-1 px-3 rounded-full bg-white border border-stone-200 text-mobi-orange text-xs font-bold uppercase tracking-wider mb-6">
@@ -69,113 +70,121 @@
                 Una solución impulsada por IA para que tus clientes diseñen su vida antes de firmar.
             </p>
             
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <button onclick="openDemoModal()" class="bg-mobi-orange text-white px-8 py-4 rounded-full font-bold hover:opacity-90 transition shadow-xl shadow-orange-500/30">
+            <!-- BOTÓN ÚNICO Y CENTRADO -->
+            <div class="flex justify-center">
+                <button onclick="openDemoModal()" class="bg-mobi-orange text-white px-10 py-4 rounded-full font-bold hover:opacity-90 transition shadow-xl shadow-orange-500/30 text-lg">
                     Ver la magia en acción
                 </button>
-                <a href="#evolucion" class="bg-white text-stone-600 border border-stone-200 px-8 py-4 rounded-full font-bold hover:bg-stone-50 transition">
-                    Ver la evolución
-                </a>
             </div>
+            <!-- Fin Botones -->
 
-            <div class="mt-16 relative max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2000&auto=format&fit=crop" alt="Espacio mobi" class="w-full h-[500px] object-cover">
-                <div class="absolute bottom-8 left-8 bg-white/90 backdrop-blur px-6 py-3 rounded-xl shadow-lg">
-                    <p class="font-bold text-slate-800 flex items-center gap-2">
-                        <i class="fa-solid fa-couch text-mobi-orange"></i> Mobiliario NIHM
+        </div>
+    </section>
+
+    <!-- 2. BENEFICIOS (Tarjeta Oscura - "La evolución no es opcional") -->
+    <!-- Movido aquí para cumplir con el orden solicitado -->
+    <section id="beneficios" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                
+                <!-- Texto (Lado Izquierdo) -->
+                <div class="p-10 md:p-16 md:w-1/2 flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold text-white mb-6">La evolución no es opcional.</h2>
+                    <p class="text-stone-300 mb-8 text-lg">
+                        El mercado inmobiliario está cambiando y el cliente exige más. Seguir haciendo lo mismo que hace 10 años es quedarse atrás. 
+                        <strong>mobi</strong> es para las inmobiliarias que dictan el futuro, no para las que lo ven pasar.
                     </p>
+                    
+                    <ul class="space-y-6">
+                        <!-- Punto 1 -->
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-mobi-orange/20 text-mobi-orange flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-gem"></i>
+                            </div>
+                            <div>
+                                <span class="text-white font-bold block">Valor sobre Precio</span>
+                                <span class="text-stone-400 text-sm">Sal de la competencia tradicional ofreciendo una experiencia inigualable que justifica tu valor.</span>
+                            </div>
+                        </li>
+                        <!-- Punto 2 -->
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-mobi-orange/20 text-mobi-orange flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-fingerprint"></i>
+                            </div>
+                            <div>
+                                <span class="text-white font-bold block">Ser Memorable</span>
+                                <span class="text-stone-400 text-sm">Haz que tu proyecto sea el único que el cliente recuerde realmente entre todas sus visitas.</span>
+                            </div>
+                        </li>
+                        <!-- Punto 3 -->
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-mobi-orange/20 text-mobi-orange flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <div>
+                                <span class="text-white font-bold block">Vanguardia Tecnológica</span>
+                                <span class="text-stone-400 text-sm">Adopta hoy la tecnología que mañana será el estándar. Sé el primero en innovar.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Imagen (Lado Derecho) -->
+                <div class="md:w-1/2 bg-stone-200 relative min-h-[300px]">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-90">
+                    <div class="absolute inset-0 bg-mobi-orange mix-blend-multiply opacity-30"></div>
+                    <div class="absolute bottom-10 left-10 right-10">
+                        <div class="bg-white/95 backdrop-blur p-6 rounded-2xl shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-mobi-orange rounded-full flex items-center justify-center text-white text-xl">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-stone-500 uppercase font-bold">Propuesta de Valor</p>
+                                    <p class="text-slate-900 font-bold text-lg">Liderazgo en el Sector</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CÓMO FUNCIONA (Simple para ti...) -->
+    <!-- Movido aquí para cumplir con el orden solicitado -->
+    <section id="como-funciona" class="py-24 bg-mobi-cream">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Simple para ti. Increíble para ellos.</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 border-b-4 border-transparent hover:border-mobi-orange">
+                    <div class="text-mobi-orange text-4xl mb-6"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3 class="text-xl font-bold mb-3">1. Captura</h3>
+                    <p class="text-stone-600">Tu agente toma una foto del casco gris o usa el render.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 border-b-4 border-transparent hover:border-mobi-orange relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-mobi-orange text-white text-xs px-3 py-1 rounded-bl-lg font-bold">IA POWERED</div>
+                    <div class="text-mobi-orange text-4xl mb-6"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 class="text-xl font-bold mb-3">2. Diseña</h3>
+                    <p class="text-stone-600">Nuestra IA amuebla el espacio en segundos con el catálogo real de <strong>NIHM</strong>.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 border-b-4 border-transparent hover:border-mobi-orange">
+                    <div class="text-mobi-orange text-4xl mb-6"><i class="fa-solid fa-key"></i></div>
+                    <h3 class="text-xl font-bold mb-3">3. Cierre</h3>
+                    <p class="text-stone-600">El cliente personaliza su futuro hogar. Tú cierras la venta.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EVOLUCIÓN -->
-    <section id="evolucion" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <div class="w-12 h-12 bg-stone-100 text-mobi-orange rounded-full flex items-center justify-center text-2xl mb-6">
-                    <i class="fa-solid fa-timeline"></i>
-                </div>
-                <h2 class="text-3xl font-bold text-slate-900 mb-6">La historia nos enseña qué sigue.</h2>
-                <p class="text-stone-600 text-lg mb-6 leading-relaxed">
-                    Hubo un tiempo en que vender sin cocina era normal. Hoy es impensable. <br>
-                    La industria inmobiliaria siempre avanza hacia entregar el producto más completo.
-                </p>
-                <div class="border-l-4 border-mobi-orange pl-6 py-2 bg-mobi-cream rounded-r-lg">
-                    <p class="text-slate-800 font-semibold">
-                        Descubre por qué mobi es el siguiente paso obligatorio. <i class="fa-solid fa-arrow-right text-mobi-orange ml-2"></i>
-                    </p>
-                </div>
-            </div>
-
-            <div class="relative bg-mobi-cream p-10 rounded-3xl min-h-[380px] flex flex-col justify-center shadow-inner border border-stone-200">
-                <!-- Slide 1 -->
-                <div id="slide-0" class="slide-content block fade-enter">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="text-4xl font-bold text-stone-300">1950</span>
-                        <div class="h-px flex-1 bg-stone-300"></div>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-600 mb-3">El Espacio Vacío</h3>
-                    <p class="text-stone-600 mb-6 text-sm md:text-base">
-                        Los departamentos se vendían sin nada. Solo había un espacio designado para "instalar" la cocina.
-                        <br><strong>El problema:</strong> El cliente compraba un problema a resolver.
-                    </p>
-                </div>
-                <!-- Slide 2 -->
-                <div id="slide-1" class="slide-content hidden fade-enter">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="text-4xl font-bold text-stone-500">1990</span>
-                        <div class="h-px flex-1 bg-stone-500"></div>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-700 mb-3">La Era del Equipamiento</h3>
-                    <p class="text-slate-600 mb-6 text-sm md:text-base">
-                        Empezó a ser común entregar muebles altos, bajos y hornos. La "cocina completa" se convirtió en estándar en Europa y EE.UU.
-                    </p>
-                </div>
-                <!-- Slide 3 -->
-                <div id="slide-2" class="slide-content hidden fade-enter">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="text-4xl font-bold text-slate-800">2000+</span>
-                        <div class="h-px flex-1 bg-slate-800"></div>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-3">El Estándar Obligatorio</h3>
-                    <p class="text-slate-700 mb-6 text-sm md:text-base">
-                        En LatAm se vuelve <strong>imposible</strong> vender un proyecto nuevo sin cocina equipada. Las inmobiliarias que no lo hicieron, perdieron mercado.
-                    </p>
-                    <div class="text-white bg-slate-800 text-xs font-bold px-3 py-1 rounded uppercase inline-block">Norma de Mercado</div>
-                </div>
-                <!-- Slide 4 -->
-                <div id="slide-3" class="slide-content hidden fade-enter">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="text-5xl font-extrabold text-mobi-orange">HOY</span>
-                        <div class="h-1 flex-1 bg-mobi-orange rounded-full"></div>
-                    </div>
-                    <h3 class="text-3xl font-bold text-slate-900 mb-3">El Próximo Estándar</h3>
-                    <p class="text-slate-700 mb-6 text-sm md:text-base">
-                        La historia se repite. El cliente ya no quiere un casco gris en la sala. 
-                        <strong>mobi</strong> permite entregar el departamento totalmente personalizado.
-                    </p>
-                    <div class="text-mobi-orange text-sm font-bold bg-white px-4 py-2 rounded-full inline-block shadow-sm border border-orange-100">
-                        <i class="fa-solid fa-check-double mr-2"></i> Sé el primero
-                    </div>
-                </div>
-
-                <div class="flex justify-between items-center mt-4 pt-6 border-t border-stone-300/50">
-                    <button onclick="changeSlide(-1)" class="text-stone-400 hover:text-mobi-orange transition text-2xl px-4 py-2"><i class="fa-solid fa-arrow-left"></i></button>
-                    <div class="flex gap-2">
-                        <div id="dot-0" class="w-2 h-2 rounded-full bg-mobi-orange transition-all"></div>
-                        <div id="dot-1" class="w-2 h-2 rounded-full bg-stone-300 transition-all"></div>
-                        <div id="dot-2" class="w-2 h-2 rounded-full bg-stone-300 transition-all"></div>
-                        <div id="dot-3" class="w-2 h-2 rounded-full bg-stone-300 transition-all"></div>
-                    </div>
-                    <button onclick="changeSlide(1)" class="text-stone-800 hover:text-mobi-orange transition text-2xl px-4 py-2"><i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- SECCIONES ADICIONALES (Video y Catálogo) -->
+    <!-- Se mantienen después de la estructura principal 1-2-3 para dar soporte visual -->
+    
     <!-- VIDEO LOCAL (GITHUB) -->
-    <section id="video-demo" class="py-10 pb-24 bg-white">
+    <section id="video-demo" class="py-24 bg-white">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-10">
                 <h2 class="text-2xl md:text-3xl font-bold text-slate-900">La evolución en acción</h2>
@@ -299,125 +308,11 @@
         </div>
     </section>
 
-    <!-- CÓMO FUNCIONA -->
-    <section id="como-funciona" class="py-24 bg-mobi-cream">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">Simple para ti. Increíble para ellos.</h2>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 border-b-4 border-transparent hover:border-mobi-orange">
-                    <div class="text-mobi-orange text-4xl mb-6"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                    <h3 class="text-xl font-bold mb-3">1. Captura</h3>
-                    <p class="text-stone-600">Tu agente toma una foto del casco gris o usa el render.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 border-b-4 border-transparent hover:border-mobi-orange relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-mobi-orange text-white text-xs px-3 py-1 rounded-bl-lg font-bold">IA POWERED</div>
-                    <div class="text-mobi-orange text-4xl mb-6"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3 class="text-xl font-bold mb-3">2. Diseña</h3>
-                    <p class="text-stone-600">Nuestra IA amuebla el espacio en segundos con el catálogo real de <strong>NIHM</strong>.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 border-b-4 border-transparent hover:border-mobi-orange">
-                    <div class="text-mobi-orange text-4xl mb-6"><i class="fa-solid fa-key"></i></div>
-                    <h3 class="text-xl font-bold mb-3">3. Cierre</h3>
-                    <p class="text-stone-600">El cliente personaliza su futuro hogar. Tú cierras la venta.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BENEFICIOS (ENFOQUE: VISIÓN Y LIDERAZGO) -->
-    <section id="beneficios" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row">
-                
-                <!-- Texto (Lado Izquierdo) -->
-                <div class="p-10 md:p-16 md:w-1/2 flex flex-col justify-center">
-                    <h2 class="text-3xl font-bold text-white mb-6">La evolución no es opcional.</h2>
-                    <p class="text-stone-300 mb-8 text-lg">
-                        El mercado inmobiliario está cambiando y el cliente exige más. Seguir haciendo lo mismo que hace 10 años es quedarse atrás. 
-                        <strong>mobi</strong> es para las inmobiliarias que dictan el futuro, no para las que lo ven pasar.
-                    </p>
-                    
-                    <ul class="space-y-6">
-                        <!-- Punto 1 -->
-                        <li class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-mobi-orange/20 text-mobi-orange flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-gem"></i>
-                            </div>
-                            <div>
-                                <span class="text-white font-bold block">Valor sobre Precio</span>
-                                <span class="text-stone-400 text-sm">Sal de la competencia tradicional ofreciendo una experiencia inigualable que justifica tu valor.</span>
-                            </div>
-                        </li>
-                        <!-- Punto 2 -->
-                        <li class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-mobi-orange/20 text-mobi-orange flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-fingerprint"></i>
-                            </div>
-                            <div>
-                                <span class="text-white font-bold block">Ser Memorable</span>
-                                <span class="text-stone-400 text-sm">Haz que tu proyecto sea el único que el cliente recuerde realmente entre todas sus visitas.</span>
-                            </div>
-                        </li>
-                        <!-- Punto 3 -->
-                        <li class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-mobi-orange/20 text-mobi-orange flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-rocket"></i>
-                            </div>
-                            <div>
-                                <span class="text-white font-bold block">Vanguardia Tecnológica</span>
-                                <span class="text-stone-400 text-sm">Adopta hoy la tecnología que mañana será el estándar. Sé el primero en innovar.</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Imagen (Lado Derecho) -->
-                <div class="md:w-1/2 bg-stone-200 relative min-h-[300px]">
-                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-90">
-                    <div class="absolute inset-0 bg-mobi-orange mix-blend-multiply opacity-30"></div>
-                    <div class="absolute bottom-10 left-10 right-10">
-                        <div class="bg-white/95 backdrop-blur p-6 rounded-2xl shadow-lg">
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-mobi-orange rounded-full flex items-center justify-center text-white text-xl">
-                                    <i class="fa-solid fa-lightbulb"></i>
-                                </div>
-                                <div>
-                                    <p class="text-xs text-stone-500 uppercase font-bold">Propuesta de Valor</p>
-                                    <p class="text-slate-900 font-bold text-lg">Liderazgo en el Sector</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="py-24 bg-mobi-orange text-white relative overflow-hidden">
+    <!-- CONTACTO (SOLO TEXTO) -->
+    <section id="contacto" class="py-12 bg-mobi-orange text-white relative overflow-hidden">
         <div class="absolute top-0 left-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">¿Listo para darle vida a tus espacios?</h2>
-            <p class="text-xl text-orange-100 mb-10 font-medium">Agenda una reunión ejecutiva de 15 minutos. <br> Sin compromiso, pura innovación.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.link/b7xiu1" target="_blank" class="bg-white text-mobi-orange text-lg px-8 py-4 rounded-full font-bold hover:bg-stone-100 transition shadow-lg w-full sm:w-auto inline-block">Agendar Demo</a>
-                <a href="https://wa.link/b7xiu1" target="_blank" class="bg-transparent border-2 border-white text-white text-lg px-8 py-4 rounded-full font-bold hover:bg-white/10 transition w-full sm:w-auto flex items-center justify-center gap-2 inline-block"><i class="fa-brands fa-whatsapp"></i> Hablemos</a>
-            </div>
-            <div class="mt-16 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-sm text-orange-100">
-                <div class="mb-4 md:mb-0 font-semibold flex items-center gap-2">
-                     <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center text-mobi-orange text-xs font-bold"><i class="fa-solid fa-home"></i></div>
-                     mobi © 2025
-                </div>
-                <div class="flex gap-6">
-                    <span>Alianza:</span>
-                    <span class="font-bold text-white">QUARZ</span>
-                    <span class="font-bold text-white">PARAGON</span>
-                    <span class="font-bold text-white">NIHM</span>
-                </div>
-            </div>
+            <h2 class="text-3xl md:text-4xl font-extrabold">¿Listo para darle vida a tus espacios?</h2>
         </div>
     </section>
 
@@ -435,21 +330,6 @@
 
     <!-- SCRIPTS -->
     <script>
-        let currentSlide = 0;
-        const totalSlides = 4; 
-        function changeSlide(direction) {
-            document.getElementById(`slide-${currentSlide}`).classList.add('hidden');
-            document.getElementById(`slide-${currentSlide}`).classList.remove('block');
-            document.getElementById(`dot-${currentSlide}`).classList.remove('bg-mobi-orange');
-            document.getElementById(`dot-${currentSlide}`).classList.add('bg-stone-300');
-            currentSlide = currentSlide + direction;
-            if (currentSlide >= totalSlides) currentSlide = 0;
-            if (currentSlide < 0) currentSlide = totalSlides - 1;
-            document.getElementById(`slide-${currentSlide}`).classList.remove('hidden');
-            document.getElementById(`slide-${currentSlide}`).classList.add('block');
-            document.getElementById(`dot-${currentSlide}`).classList.remove('bg-stone-300');
-            document.getElementById(`dot-${currentSlide}`).classList.add('bg-mobi-orange');
-        }
         const modal = document.getElementById('demoModal');
         const iframe = document.getElementById('demoIframe');
         const demoUrl = "https://mobi-design-ia-de-dise-o-de-interiores-38180566774.us-west1.run.app/";
